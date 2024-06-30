@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "NHotkey.WinUI.Demo (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "NHotkey.WinUI.Demo (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
