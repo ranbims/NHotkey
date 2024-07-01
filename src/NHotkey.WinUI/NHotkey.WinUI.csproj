@@ -7,6 +7,15 @@
     <RuntimeIdentifiers Condition="$([MSBuild]::GetTargetFrameworkVersion('$(TargetFramework)')) &lt; 8">win10-x86;win10-x64;win10-arm64</RuntimeIdentifiers>
     <UseWinUI>true</UseWinUI>
     <Platforms>AnyCPU;x64</Platforms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Ran Bi</Authors>
+    <PackageProjectUrl>https://github.com/ranbims/NHotkey</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/ranbims/NHotkey</RepositoryUrl>
+    <PackageTags>global;hotkey;windows;winui</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <Version>3.0.0</Version>
+	<MinVerSkip>true</MinVerSkip>
+	<Description>A managed library to handle global hotkeys in WinUI applications. This package contains the concrete HotkeyManager implementation for WinUI.</Description>
   </PropertyGroup>
 
   <ItemGroup>
