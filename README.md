@@ -117,3 +117,35 @@ still be registered
 - changing the keys or modifiers of a `KeyBinding` at runtime is currently not supported. If
 you need to modify a `KeyBinding` at runtime, you need to set `HotkeyManager.RegisterGlobalHotkey`
 to false, change the key, and set `HotkeyManager.RegisterGlobalHotkey` to true again.
+
+### WinUI usage
+The approach for WinUI is very similar to the one for Windows Forms. In the file where you want to
+handle hotkeys, import the `NHotkey.WindowsForms` namespace:
+
+```csharp
+    using NHotkey.WinUI;
+```
+
+Declare some keyboard accelerators.
+
+```csharp
+    private static readonly KeyboardAccelerator IncrementGesture = new KeyboardAccelerator
+    {
+        Key = Windows.System.VirtualKey.Up,
+        Modifiers = Windows.System.VirtualKeyModifiers.Control | Windows.System.VirtualKeyModifiers.Menu
+    };
+    private static readonly KeyboardAccelerator DecrementGesture = new KeyboardAccelerator
+    {
+        Key = Windows.System.VirtualKey.Down,
+        Modifiers = Windows.System.VirtualKeyModifiers.Control | Windows.System.VirtualKeyModifiers.Menu
+    };
+```
+
+During initialization, add the keyboard accelerators into HotkeyManager.
+
+```csharp
+    HotkeyManager.Current.AddOrReplace("Increment", Keys.Control | Keys.Alt | Keys.Add, OnIncrement);
+    HotkeyManager.Current.AddOrReplace("Decrement", Keys.Control | Keys.Alt | Keys.Subtract, OnDecrement);
+```
+
+Others are almost exact with the Windows Forms usage.
