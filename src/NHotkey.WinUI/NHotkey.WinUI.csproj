@@ -14,8 +14,8 @@
     <PackageTags>global;hotkey;windows;winui</PackageTags>
     <RepositoryType>git</RepositoryType>
     <Version>3.0.1</Version>
-	<MinVerSkip>true</MinVerSkip>
-	<Description>A managed library to handle global hotkeys in WinUI applications. This package is self-contained and not rely on NHotkey.</Description>
+	  <MinVerSkip>true</MinVerSkip>
+	  <Description>A managed library to handle global hotkeys in WinUI applications. This package is self-contained and not rely on NHotkey.</Description>
   </PropertyGroup>
 
   <ItemGroup>
